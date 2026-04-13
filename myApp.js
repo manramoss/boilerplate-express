@@ -1,9 +1,12 @@
 require('dotenv').config();
 let express = require('express');
 let bodyParser = require('body-parser');
+let cors = require('cors');
 let app = express();
 
 console.log("Hello World");
+
+app.use(cors());
 
 app.use(function(req, res, next) {
   console.log(req.method + ' ' + req.path + ' - ' + req.ip);
