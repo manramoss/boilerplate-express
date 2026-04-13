@@ -11,6 +11,7 @@ app.use(function(req, res, next) {
 });
 
 app.use(bodyParser.urlencoded({extended: false}));
+app.use(express.json());
 
 app.use('/public', express.static(__dirname + '/public'));
 
